@@ -1,0 +1,70 @@
+{{>header}}
+
+<section class="container my-3">
+    <div class="d-flex justify-content-end mb-3">
+        <a href="/addcus" class="btn btn-primary mx-3">Add New Customer</a>
+    </div>
+    <div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>age</th>
+                    <th>balance</th>
+                    <th>debit</th>
+                  
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#if isEmpty}}
+                <tr>
+                    <td colspan="3" class="bg-danger text-white ">No Users Yet</td>
+                </tr>
+                {{else}}
+                {{#each customers}}
+                <tr>
+                    <td>{{this._id}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.age}}</td>
+                    <td>{{this.balance.value}}</td>
+                    <td>{{this.debit.value}}</td>
+
+                    <td>
+                        <a class="btn btn-primary" href="/single/{{this._id}}">Show</a>
+                        <a class="btn btn-warning" href="/edit/{{this._id}}">Edit</a>
+                        <a class="btn btn-danger " href="/delete/{{this._id}}">Delete</a>
+                        <a class="btn btn-success " href="/addbalance/{{this._id}}">balance</a>
+                        <a class="btn btn-success " href="/addDeps/{{this._id}}">debit</a>
+                       
+                    </td>
+                </tr>
+                {{/each}}
+
+                {{/if}}
+            </tbody>
+        </table>
+    </div>
+</section>
+{{!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" value='{{this._id}}' class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div> --}}
+
+{{>footer}}

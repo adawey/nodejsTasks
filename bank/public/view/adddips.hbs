@@ -1,0 +1,24 @@
+{{>header}}
+<section class="container my-3">
+    <h2>add debit </h2>
+    {{#if isEmpty}}
+    <div class="alert alert-danger">
+        customer not found
+    </div>
+    {{else}}
+
+    <form method="post">
+      
+          <div class="mb-3">
+            <input class="form-control" name="debit">
+            {{#if errors.debit}}
+                <div class="text-danger"><span>{{errors.debit}}</span></div>
+            {{/if}}
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Edit Customer</button>
+        </div>
+    </form>
+    {{/if}}
+</section>
+{{>footer}}

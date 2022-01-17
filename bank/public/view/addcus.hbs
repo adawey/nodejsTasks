@@ -1,0 +1,37 @@
+{{>header}}
+
+<section class="container my-3">
+    <h2>Add New Customer</h2>
+    <form method="post">
+        <div class="mb-3">
+            <input class="form-control" name="name" placeholder="Enter your name" value="{{customer.name}}">
+            {{#if errors.name}}
+                <div class="text-danger"><span>{{errors.name}}</span></div>
+            {{/if}}
+        </div>
+             <div class="mb-3">
+            <input class="form-control" name="email" placeholder="Enter your email"  value="{{customer.email}}">
+            {{#if errors.email}}
+                <div class="text-danger"><span>{{errors.email}}</span></div>
+            {{/if}}
+            
+        </div>
+        <div class="mb-3">
+            <input class="form-control" name="age" placeholder="Enter your age"  value="{{customer.age}}">
+            {{#if errors.age}}
+                <div class="text-danger"><span>{{errors.age}}</span></div>
+            {{/if}}
+        </div>
+        <div class="mb-3">
+            <input class="form-control" name="balance" placeholder="Enter initial deposit"  value="{{customer.balance}}">
+            {{#if errors.balance}}
+                <div class="text-danger"><span>{{errors.balance}}</span></div>
+            {{/if}}
+            
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Add Customer</button>
+        </div>
+    </form>
+</section>
+{{>footer}}

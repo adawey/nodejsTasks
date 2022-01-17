@@ -1,0 +1,25 @@
+{{>header}}
+
+<section class="container my-3">
+    <div class="border border-3 border-primary p-4">
+        {{#if isEmpty}}
+            <div class="alert alert-danger">
+                customer not found
+            </div>        
+        {{else}}
+        <h5>Name: {{customer.name}}</h5>
+        <h6>age: {{customer.age}}</h6>
+        <p>
+            address: {{customer.address}}
+        </p>
+        <p>
+            email: {{customer.email}}
+        </p>
+        <p>
+            initial balance:{{customer.balance}}
+            </p>
+      
+        {{/if}}
+    </div>
+</section>
+{{>footer}}
