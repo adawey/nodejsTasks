@@ -1,0 +1,34 @@
+mongoose model
+user
+    - name
+    - age
+    - password
+    - email
+    - created at updated at
+    - gender
+    - status
+    - token 
+
+ 
+
+
+
+    
+register
+login
+logout
+edit profile
+
+add post, edit , delete , show
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+{
+	"id": "ed239455-5845-464f-b85a-9f5d0854c54c",
+	"name": "node",
+	"timestamp": "2022-01-30T23:16:26.211Z",
+	"collection_id": "0-f0fe10c8-b91f-43f4-96cf-0fea5c8945ca",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [],
+	"count": 1,
+	"totalTime": 0,
+	"collection": {
+		"requests": [
+			{
+				"id": "537ed3ad-7450-464c-97a2-01e294042acb",
+				"method": "POST"
+			}
+		]
+	}
+}
